@@ -27,6 +27,13 @@
           # ✅ Globally allow unfree packages (for system + home-manager)
           {
             nixpkgs.config.allowUnfree = true;
+	    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
+	      "steam"
+	      "steam-original"
+	      "steam-unwrapped"
+	      "steam-run"
+	    ];
+
           }
         ];
       };

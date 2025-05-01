@@ -15,6 +15,7 @@
   # note that this should be /dev/sda for a non-vm desktop
   boot.loader.grub.device = "/dev/vda";
   boot.loader.grub.useOSProber = false;
+  boot.loader.grub.default = 0;
 
 
   networking.hostName = "stevica"; # Define your hostname.
@@ -139,7 +140,7 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 30d";
+    options = "--delete-older-than 7d";
   };
 
 }

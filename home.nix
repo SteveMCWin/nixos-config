@@ -30,12 +30,12 @@
 			btop
 			git
 			discord
-			#gimp
+			gimp
 			firefox
-			#heroic
-			#hotspot
+			heroic
+			hotspot
 			spotify
-			#steam
+			steam
 			vscode
 
 			# # It is sometimes useful to fine-tune packages, for example, by applying
