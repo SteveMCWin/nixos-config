@@ -14,7 +14,7 @@
   boot.loader.grub.enable = true;
   # note that this should be /dev/sda for a non-vm desktop
   boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.useOSProber = false;
 
 
   networking.hostName = "stevica"; # Define your hostname.

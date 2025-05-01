@@ -28,14 +28,15 @@
 			hello
 			neofetch
 			btop
-			#discord
+			git
+			discord
 			#gimp
-			#firefox
+			firefox
 			#heroic
 			#hotspot
-			#spotify
+			spotify
 			#steam
-			#vscode
+			vscode
 
 			# # It is sometimes useful to fine-tune packages, for example, by applying
 			# # overrides. You can do that directly here, just don't forget the
