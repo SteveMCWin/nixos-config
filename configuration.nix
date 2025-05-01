@@ -47,6 +47,9 @@
     variant = "";
   };
 
+  # added this so i can go fullscreen inside of boxes
+  services.spice-vdagentd.enable = true;
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
