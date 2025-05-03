@@ -10,7 +10,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, ... }@inputs :
     let
       system = "x86_64-linux";
     in
@@ -21,10 +21,15 @@
         modules = [
           ./configuration.nix
 
-          # ✅ Enable home-manager as part of the system
           home-manager.nixosModules.home-manager
+	  {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-          # ✅ Globally allow unfree packages (for system + home-manager)
+            home-manager.users.stevica = import ./home.nix;
+
+          }
+
           {
             nixpkgs.config.allowUnfree = true;
 	    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
